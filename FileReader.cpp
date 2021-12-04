@@ -5,6 +5,9 @@ vector<string> FileReader::ReadFileString(string filename)
 	ifstream file;
 	file.open(filename);
 
+	if (file.fail())
+		cout << "Couldn't open file!" << endl;
+
 	vector<string> lines;
 
 	string line;
